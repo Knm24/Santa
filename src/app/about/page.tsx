@@ -9,13 +9,15 @@ import { red } from '@mui/material/colors';
 
 const BootstrapButton = styled(Button)({
   boxShadow: 'none',
+  color: '#333',
   textTransform: 'none',
   fontSize: 16,
+  borderRadius: '15px',
   padding: '6px 12px',
   border: '1px solid',
   lineHeight: 1.5,
-  backgroundColor: '#0063cc',
-  borderColor: '#0063cc',
+  backgroundColor: '#FFF',
+  borderColor: '#FF6300',
   fontFamily: [
     '-apple-system',
     'BlinkMacSystemFont',
@@ -44,8 +46,9 @@ const BootstrapButton = styled(Button)({
 });
 
 const ColorButton2 = styled(Button)<ButtonProps>(({ theme }) => ({
-  color: theme.palette.getContrastText(red['A100']),
-  backgroundColor: red['A100'],
+  color: '#FFF',
+  borderRadius: '15px',
+  backgroundColor: '#FF6300',
   '&:hover': {
     backgroundColor: red[700],
   },
@@ -54,9 +57,9 @@ const ColorButton2 = styled(Button)<ButtonProps>(({ theme }) => ({
 export default function CustomizedButtons() {
   return (
     <Stack spacing={2} direction="row">
-      <ColorButton2 variant="contained">Custom1 CSS</ColorButton2>
+      <ColorButton2 variant="contained">Создать игру</ColorButton2>
       <BootstrapButton variant="contained" disableRipple>
-        Bootstrap
+        Жеребьевка
       </BootstrapButton>
     </Stack>
   );
